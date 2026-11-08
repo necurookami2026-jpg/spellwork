@@ -1,0 +1,12 @@
+{
+  "unit": "demo-quilt-unit",
+  "influx": 45,
+  "entry": "intake",
+  "records": {
+    "intake": {"sealed": true, "request": 0, "links": ["systemat", "held"]},
+    "systemat": {"sealed": true, "request": 18, "links": ["quilt"]},
+    "quilt": {"sealed": true, "request": 12, "links": ["intake"]},
+    "held": {"sealed": false, "request": 20, "links": ["reserve"]},
+    "reserve": {"sealed": true, "request": 10, "links": []}
+  }
+}
